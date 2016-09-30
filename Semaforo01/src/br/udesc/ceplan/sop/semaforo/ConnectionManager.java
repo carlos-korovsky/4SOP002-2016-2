@@ -16,9 +16,9 @@ import java.util.concurrent.Semaphore;
 public class ConnectionManager {
     
     private static final ConnectionManager INSTANCE = new ConnectionManager();
-    private static final int AVALIABLE_CONNECTIONS = 10;
-    private static final int TOTAL_CONNECTIONS = AVALIABLE_CONNECTIONS; //Número total de conexões disponíveis
-
+    private static final int TOTAL_CONNECTIONS = 10; //Número total de conexões
+    private static final int AVALIABLE_CONNECTIONS = 1; //Número máximo de conexões disponíveis para uso
+    
     private final Queue<Connection> connections;
     private final Semaphore semaforo;
     
